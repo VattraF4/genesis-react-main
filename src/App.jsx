@@ -42,7 +42,7 @@ export default function App() {
                 <PricingPlans />
                 <CallToAction />
                 <AboutUs/>
-                {/* <GetQuotePage /> */}
+                <GetQuotePage />
                 <FaqSection />
             </main>
             <Footer />

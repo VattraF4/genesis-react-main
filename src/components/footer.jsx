@@ -74,8 +74,6 @@ export default function Footer() {
                         <li className="flex items-center gap-3 text-sm text-gray-300">
                             <PhoneIcon className="size-5 text-primary shrink-0" />
                             <div className="flex flex-col">
-                                <a href="tel:+85515255191" className="hover:text-primary">+855 15 255 191</a>
-                                <a href="tel:+85515225733" className="hover:text-primary">+855 15 225 733</a>
                                 <a href="tel:+855966678895" className="hover:text-primary">+855 96 667 8895</a>
                             </div>
                         </li>

@@ -49,7 +49,7 @@ export default function Navbar() {
                             {link.name}
                         </a>
                     ))}
-                    <a href='/' className='btn glass text-white hover:text-gray-500' onClick={() => setIsOpen(false)}>
+                    <a href='#get-quote' className='btn glass text-white hover:text-gray-500' onClick={() => setIsOpen(false)}>
                         Get a Quote
                     </a>
                 </div>
@@ -67,8 +67,8 @@ export default function Navbar() {
                 ))}
 
 
-                <a href='/' className='btn glass' onClick={() => setIsOpen(false)}>
-                    Sign Up
+                <a href='#get-quote' className='btn glass' onClick={() => setIsOpen(false)}>
+                    Get a Quote
                 </a>
 
                 <button onClick={() => setIsOpen(false)} className='rounded-md p-2 glass'>
