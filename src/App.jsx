@@ -17,7 +17,7 @@ export default function App() {
             <Navbar />
             <div className="fixed inset-0 overflow-hidden -z-20 pointer-events-none">
                 {/* Left side - Purple/pink (your existing) */}
-                <div className="absolute rounded-full top-80 left-2/5 -translate-x-1/2 size-130 bg-[#8b5cf6] blur-[100px] opacity-40" />
+                <div className="absolute rounded-full top-80 left-2/5 -translate-x-1/2 size-130 bg-[#] blur-[100px] opacity-40" />
 
                 {/* Right side - Softer blue (your existing) */}
                 <div className="absolute rounded-full top-80 right-0 -translate-x-1/2 size-130 bg-[#3b82f6] blur-[100px] opacity-30" />

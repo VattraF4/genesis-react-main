@@ -39,16 +39,16 @@ export default function Navbar() {
                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
             >
                 <a href='#!'>
-                    <img src='/assets/lokka_width-removebg.png' alt='lokka logistics logo' className='h-12 w-auto' width={308*1.5} height={72*1.5} />
+                    <img src='/assets/lokka_width-removebg.png' alt='lokka logistics logo' className='h-12 w-auto' width={308 * 1.5} height={72 * 1.5} />
                 </a>
 
                 <div className='hidden items-center space-x-10 md:flex'>
                     {links.map((link) => (
-                        <a key={link.name} href={link.href} className='transition hover:text-gray-300'>
+                        <a key={link.name} href={link.href} className='transition hover:text-gray-300 text-blue-500 font-medium font-bold'>
                             {link.name}
                         </a>
                     ))}
-                    <a href='/' className='btn glass'>
+                    <a href='/' className='btn glass text-blue-500' onClick={() => setIsOpen(false)}>
                         Sign Up
                     </a>
                 </div>
