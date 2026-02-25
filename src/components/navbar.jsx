@@ -8,10 +8,11 @@ export default function Navbar() {
 
     const links = [
         { name: 'Home', href: '#' },
+        { name: 'Service', href: '#features' },
         { name: 'Our Work', href: '#workflow' },
-        { name: 'Use Cases', href: '#use-cases' },
         { name: 'Pricing', href: '#pricing' },
-        { name: 'Docs', href: '#docs' }
+        { name: 'About Us', href: '#about-us' },
+        { name: 'FAQ', href: '#faq' },
     ];
 
     useEffect(() => {
@@ -38,18 +39,18 @@ export default function Navbar() {
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
             >
-                <a href='#!'>
-                    <img src='/assets/lokka_width-removebg.png' alt='lokka logistics logo' className='h-12 w-auto' width={308 * 1.5} height={72 * 1.5} />
+                <a href='#' className='flex items-center gap-2' onClick={() => setIsOpen(false)}>
+                    <img src='/assets/lokka_width-removebg.png' alt='lokka logistics logo' className='h-12 w-auto' width={308 * 2} height={72 * 2} />
                 </a>
 
                 <div className='hidden items-center space-x-10 md:flex'>
                     {links.map((link) => (
-                        <a key={link.name} href={link.href} className='transition hover:text-gray-300 text-blue-500 font-medium font-bold'>
+                        <a key={link.name} href={link.href} className='transition hover:text-gray-400 text-white font-medium'>
                             {link.name}
                         </a>
                     ))}
-                    <a href='/' className='btn glass text-blue-500' onClick={() => setIsOpen(false)}>
-                        Sign Up
+                    <a href='/' className='btn glass text-white hover:text-gray-500' onClick={() => setIsOpen(false)}>
+                        Get a Quote
                     </a>
                 </div>
 

@@ -41,7 +41,7 @@ export default function Features() {
     ];
 
     return (
-        <section className="mt-32">
+        <section className="mt-32" id="features">
             <SectionTitle
                 title="Our Logistics Services"
                 description="Complete shipping solutions from China to the world — reliable, transparent, and hassle-free."

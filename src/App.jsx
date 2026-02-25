@@ -9,6 +9,8 @@ import WorkflowSteps from "./sections/workflow-steps";
 import Testimonials from "./sections/testimonials";
 import PricingPlans from "./sections/pricing-plans";
 import CallToAction from "./sections/call-to-action";
+import AboutUs from "./sections/about-us";
+import GetQuotePage from "./components/GetQuotePage";
 
 export default function App() {
     return (
@@ -25,21 +27,23 @@ export default function App() {
                 {/* Top center - Warm accent (your existing) */}
                 <div className="absolute rounded-full top-0 left-1/2 -translate-x-1/2 size-130 bg-[#ec4899] blur-[100px] opacity-20" />
 
-                {/* NEW: Top Left Corner - Orange */}
-                <div className="absolute rounded-full -top-20 -left-20 size-96 bg-[#f97316] blur-[120px] opacity-40" />
+                {/* NEW: Top Left Corner - Gray */}
+                <div className="absolute rounded-full -top-20 -left-20 size-100 bg-[#6b7280] blur-[120px] opacity-50" />
 
                 {/* NEW: Top Right Corner - Orange */}
-                <div className="absolute rounded-full -top-20 -right-20 size-96 bg-[#f97316] blur-[120px] opacity-40" />
+                <div className="absolute rounded-full -top-20 -right-20 size-96 bg-[#6b7280] blur-[120px] opacity-50" />
             </div>
             <main className='px-4'>
                 <HeroSection />
-                <TrustedCompanies />
+                {/* <TrustedCompanies /> */}
                 <Features />
                 <WorkflowSteps />
                 {/* <Testimonials /> */}
-                <FaqSection />
                 <PricingPlans />
                 <CallToAction />
+                <AboutUs/>
+                {/* <GetQuotePage /> */}
+                <FaqSection />
             </main>
             <Footer />
         </>
