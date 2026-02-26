@@ -7,62 +7,47 @@ export default function Testimonials() {
     const ref = useRef([]);
     const data = [
         {
-            review: 'Super clean and easy to use. These Tailwind + React components saved me hours of dev time and countless lines of extra code!',
-            name: 'Richard Nelson',
-            about: 'Founder & CEO',
-            rating: 5,
+            review: 'Outstanding service and exceptional customer support. Lokka Logistics made our international shipping seamless and worry-free.',
+            name: 'Nuon Rannin',
+            about: 'CEO, Logistics Director',
+            image: 'https://app.glueup.com/resources/public/images/square/300/72871d1c-6ff8-45f7-9811-0fc9f7e18eac.png',
+        },
+        {
+            review: 'Lokka Logistics handled our container shipment from Shanghai to Los Angeles perfectly. Real-time tracking kept us informed every step of the way.',
+            name: 'EA Seakheng',
+            about: 'CEO, Founder',
             image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200',
         },
         {
-            review: 'The design quality is top-notch. Perfect balance between simplicity and style. Highly recommend for any creative developer!',
-            name: 'Sophia Martinez',
-            about: 'Founder & CEO',
-            rating: 5,
+            review: 'Best freight forwarder we\'ve worked with. Customs clearance was smooth and delivery was ahead of schedule. Highly recommended!',
+            name: 'SAM Potthey',
+            about: 'CEO, Operations Director',
             image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200',
         },
         {
-            review: 'Absolutely love the reusability of these components. My workflow feels 10x faster now with cleaner and more consistent layouts.',
-            name: 'Ethan Roberts',
-            about: 'Founder & CEO',
-            rating: 5,
+            review: 'We ship from China weekly and Lokka has never let us down. Competitive rates, great communication, and reliable service.',
+            name: 'ANN Rithy',
+            about: 'CEO, Supply Chain Manager',
             image: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60',
-        },
-        {
-            review: 'Clean, elegant, and efficient. These components are a dream for any modern web developer who values beautiful code.',
-            name: 'Isabella Kim',
-            about: 'Founder & CEO',
-            rating: 5,
-            image: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&auto=format&fit=crop&q=60',
-        },
-        {
-            review: "I've tried dozens of UI kits, but this one just feels right. Everything works seamlessly and looks incredibly polished.",
-            name: 'Liam Johnson',
-            about: 'Founder & CEO',
-            rating: 5,
-            image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&h=100&auto=format&fit=crop',
-        },
-        {
-            review: 'Brilliantly structured components with clean, modern styling. Makes development a joy and design updates super quick.',
-            name: 'Ava Patel',
-            about: 'Founder & CEO',
-            rating: 5,
-            image: 'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/userImage/userImage1.png',
-        },
+        }, 
     ];
+
     return (
         <section className="mt-32 flex flex-col items-center">
             <SectionTitle
-                title="Here what aur trusted users about our best AI agents."
-                description="Empower your business with AI agents that optimize processes and accelerate performance."
+                title="What Our Clients Say About Lokka Logistics"
+                description="Trusted by importers and businesses worldwide for reliable shipping"
             />
-            <div className='mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='mt-12 flex flex-wrap justify-center gap-6'>
                 {data.map((item, index) => (
-                    <motion.div key={index} className='w-full max-w-88 space-y-5 rounded-lg glass p-5 hover:-translate-y-1'
+                    <motion.div
+                        key={index}
+                        className='w-full max-w-88 space-y-4 rounded-lg glass p-6 hover:-translate-y-1 hover:border-blue-500/30 transition-all duration-300 border-l-4 border-blue-500/50'
                         initial={{ y: 150, opacity: 0 }}
                         ref={(el) => (ref.current[index] = el)}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true }}
-                        transition={{ delay: `${index * 0.15}`, type: "spring", stiffness: 320, damping: 70, mass: 1 }}
+                        transition={{ delay: index * 0.15, type: "spring", stiffness: 320, damping: 70, mass: 1 }}
                         onAnimationComplete={() => {
                             const card = ref.current[index];
                             if (card) {
@@ -70,14 +55,19 @@ export default function Testimonials() {
                             }
                         }}
                     >
-                        <div className='flex items-center justify-between'>
-                            <p className="font-medium">{item.about}</p>
-                            <img className='size-10 rounded-full' src={item.image} alt={item.name} />
+                        <div className='flex items-start gap-3'>
+                            <span className='text-3xl text-blue-400/40 leading-none'>❝</span>
+                            <div className='flex-1'>
+                                <p className='text-gray-200 leading-relaxed italic'>{item.review}</p>
+                                <div className='mt-4 flex items-center justify-between'>
+                                    <div>
+                                        <p className='font-semibold text-white'>— {item.name}</p>
+                                        <p className="text-xs font-medium text-blue-400/80">{item.about}</p>
+                                    </div>
+                                    <img className='size-10 rounded-full border-2 border-blue-400/30' src={item.image} alt={item.name} />
+                                </div>
+                            </div>
                         </div>
-                        <p className='line-clamp-3'>“{item.review}”</p>
-                        <p className='text-gray-300'>
-                            - {item.name}
-                        </p>
                     </motion.div>
                 ))}
             </div>
