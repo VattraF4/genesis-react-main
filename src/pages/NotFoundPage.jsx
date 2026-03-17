@@ -9,10 +9,16 @@ import {
     MailIcon
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from '@dr.pogodin/react-helmet';
 
 export default function NotFoundPage() {
     return (
         <>
+            <Helmet>
+                <title>404 - Page Not Found | LOKKA LOGISTICS</title>
+                <meta name="description" content="The page you are looking for does not exist. Return to Lokka Logistics home page for our comprehensive logistics services." />
+                <meta name="robots" content="noindex, follow" />
+            </Helmet>
             <div className="fixed inset-0 overflow-hidden -z-20 pointer-events-none">
                 <div className="absolute rounded-full top-80 left-2/5 -translate-x-1/2 size-100 bg-[#1E4A8C]/40 blur-[100px]" />
                 <div className="absolute rounded-full top-80 right-0 -translate-x-1/2 size-100 bg-[#2A6BBF]/40 blur-[100px]" />

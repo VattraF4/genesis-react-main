@@ -29,9 +29,9 @@ export default function Navbar() {
 
     const handleSectionClick = (e, sectionId) => {
         if (sectionId === '') return; // Home link - let Link handle it
-        
+
         e.preventDefault();
-        
+
         if (!isHomePage) {
             // If not on homepage, go to homepage with hash
             window.location.href = `/#${sectionId}`;
@@ -55,22 +55,21 @@ export default function Navbar() {
 
     return (
         <>
-            <motion.nav 
-                className={`sticky top-0 z-50 flex w-full items-center justify-between px-4 py-3.5 md:px-16 lg:px-24 transition-colors ${
-                    isScrolled ? 'bg-white/15 backdrop-blur-lg' : ''
-                }`}
+            <motion.nav
+                className={`sticky top-0 z-50 flex w-full items-center justify-between px-4 py-3.5 md:px-16 lg:px-24 transition-colors ${isScrolled ? 'bg-white/15 backdrop-blur-lg' : ''
+                    }`}
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
             >
                 {/* Logo - always goes to home */}
                 <Link to='/' className='flex items-center gap-2' onClick={handleHomeClick}>
-                    <img 
-                        src='/assets/lokka_width-removebg.png' 
-                        alt='lokka logistics logo' 
-                        className='h-12 w-auto' 
-                        width={308 * 2} 
-                        height={72 * 2} 
+                    <img
+                        src='/assets/lokka_width-removebg.png'
+                        alt='lokka logistics logo'
+                        className='h-12 w-auto'
+                        width={308 * 2}
+                        height={72 * 2}
                     />
                 </Link>
 
@@ -86,8 +85,8 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <Link 
-                        to='/#get-quote' 
+                    <Link
+                        to='/#get-quote'
                         className='btn glass text-white hover:text-gray-500'
                         onClick={(e) => handleSectionClick(e, 'get-quote')}
                     >
@@ -102,9 +101,8 @@ export default function Navbar() {
             </motion.nav>
 
             {/* Mobile Menu */}
-            <div className={`fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-black/20 text-lg font-medium backdrop-blur-2xl transition duration-300 md:hidden ${
-                isOpen ? 'translate-x-0' : '-translate-x-full'
-            }`}>
+            <div className={`fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-black/20 text-lg font-medium backdrop-blur-2xl transition duration-300 md:hidden ${isOpen ? 'translate-x-0' : '-translate-x-full'
+                }`}>
                 {links.map((link) => (
                     <Link
                         key={link.name}
