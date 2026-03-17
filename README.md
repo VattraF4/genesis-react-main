@@ -1,17 +1,14 @@
-# Genesis - AI Agent SaaS Template
 
 #### Preview
 
- - [Demo](https://themewagon.github.io/genesis-react/)
+ - [Demo](https://lokkalogistics.com/)
 
-#### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/genesis-react/)
 
 ## Getting Started
 
 1. Clone Repository
 ```
-git clone https://github.com/themewagon/genesis-react.git
+git clone https://github.com/VattraF4/logistic-company-profile.git
 ```
 2. Install Dependencies
 ```
@@ -34,8 +31,3 @@ bun dev
 Design and code is completely written by PrebuiltUI and development team. 
 ```
 
-## License
-
- - Design and Code is Copyright &copy; <a href="https://prebuiltui.com/?utm_source=genesis" target="_blank">PrebuiltUI</a>
- - Licensed cover under [MIT]
- - Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>

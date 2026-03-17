@@ -12,24 +12,24 @@ export default function Testimonials() {
             about: 'CEO, Logistics Director',
             image: 'https://app.glueup.com/resources/public/images/square/300/72871d1c-6ff8-45f7-9811-0fc9f7e18eac.png',
         },
-        {
-            review: 'Lokka Logistics handled our container shipment from Shanghai to Los Angeles perfectly. Real-time tracking kept us informed every step of the way.',
-            name: 'EA Seakheng',
-            about: 'CEO, Founder',
-            image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200',
-        },
-        {
-            review: 'Best freight forwarder we\'ve worked with. Customs clearance was smooth and delivery was ahead of schedule. Highly recommended!',
-            name: 'SAM Potthey',
-            about: 'CEO, Operations Director',
-            image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200',
-        },
-        {
-            review: 'We ship from China weekly and Lokka has never let us down. Competitive rates, great communication, and reliable service.',
-            name: 'ANN Rithy',
-            about: 'CEO, Supply Chain Manager',
-            image: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60',
-        }, 
+        // {
+        //     review: 'Lokka Logistics handled our container shipment from Shanghai to Los Angeles perfectly. Real-time tracking kept us informed every step of the way.',
+        //     name: 'EA Seakheng',
+        //     about: 'CEO, Founder',
+        //     image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200',
+        // },
+        // {
+        //     review: 'Best freight forwarder we\'ve worked with. Customs clearance was smooth and delivery was ahead of schedule. Highly recommended!',
+        //     name: 'SAM Potthey',
+        //     about: 'CEO, Operations Director',
+        //     image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200',
+        // },
+        // {
+        //     review: 'We ship from China weekly and Lokka has never let us down. Competitive rates, great communication, and reliable service.',
+        //     name: 'ANN Rithy',
+        //     about: 'CEO, Supply Chain Manager',
+        //     image: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60',
+        // }, 
     ];
 
     return (
